@@ -58,7 +58,7 @@ class Translate(QWidget):
     self.topicLabel.move(30, 120)
     self.topicLabel.resize(100,30)
     self.topicLabel.setText("添加话题：")
-    self.topic_le = QLineEdit('#体育', self)
+    self.topic_le = QLineEdit('#篮球', self)
     self.topic_le.move(120,120)
     self.topic_le.resize(250,30)
 
@@ -131,8 +131,10 @@ class MyThread(QThread):#线程类
     self.my_signal.emit(True)  #释放自定义的信号
 
   def transRequest(self, q, trans_from, trans_to):
-    key = "C4_azdaSXSfteFdUHZeyTommy"
-    appid = '20200808000537597123'
+    # key = "C4_azdaSXSfteFdUHZeyTommy"
+    # appid = '20200808000537597123'
+    key = "F4lvKuxL2iomgdv1I4G_TTdsp"
+    appid = '20200825000551122123'
     salt = str(time.time())
     sign = appid + q + salt + key
     m = hashlib.new("md5")  
